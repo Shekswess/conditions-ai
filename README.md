@@ -16,7 +16,7 @@ So, if you’re ready to level up your SaaS product and impress your boss withou
 For all those who want to sprinkle a little AI magic into their product without the sorcery of complicated machine learning—this is for you!
 
 
-Inspired by ['is-even-ai'](https://github.com/Calvin-LL/is-even-ai/tree/main) for JS/TS and [this tweet](https://twitter.com/erenbali/status/1766602689863950658).
+**Inspired by ['is-even-ai'](https://github.com/Calvin-LL/is-even-ai/tree/main) for JS/TS and [this tweet](https://twitter.com/erenbali/status/1766602689863950658).**
 
 ## Installation 🛠️
 

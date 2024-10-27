@@ -1,7 +1,7 @@
 [project]
 name = "conditions-ai"
-version = "0.1.1"
-description = "Check conditions with the power of ✨AI✨"
+version = "0.1.2"
+description = "Harness the true power of 🚀GenAI🚀"
 readme = "README.md"
 requires-python = ">=3.8"
 dependencies = [

@@ -1,0 +1,11 @@
+[project]
+name = "conditions-ai"
+version = "0.1.2"
+description = "Harness the true power of 🚀GenAI🚀"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "loguru>=0.7.2",
+    "openai>=1.52.2",
+    "python-dotenv>=1.0.1",
+]

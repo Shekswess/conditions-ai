@@ -1,4 +1,4 @@
-name: Build & Release
+name: Build
 
 on:
     push:
@@ -26,5 +26,5 @@ jobs:
         - name: Store the package
           uses: actions/upload-artifact@v4
           with:
-            name: python-package-distributions
+            name: conditions-ai
             path: dist/

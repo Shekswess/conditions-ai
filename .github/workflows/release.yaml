@@ -1,34 +1,35 @@
 name: Release on PyPI
 
 on:
-    push:
-      tags:
-        - 'v*'
+  workflow_run:
+    workflows: ["Build"]
+    types:
+      - completed
 
 jobs:
-    release:
-        name: Release
-        runs-on: ubuntu-latest
+  release:
+    name: Release
+    runs-on: ubuntu-latest
 
-        steps:
-        - uses: actions/checkout@v4
+    steps:
+    - uses: actions/checkout@v4
 
-        - name: Install uv
-          uses: astral-sh/setup-uv@v3
+    - name: Install uv
+      uses: astral-sh/setup-uv@v3
 
-        - name: Set up Python
-          run: uv python install
+    - name: Set up Python
+      run: uv python install
 
-        - name: Install twine
-          run: uv add twine
+    - name: Install twine
+      run: uv add twine
 
-        - name: Download build artifact
-          uses: actions/download-artifact@v4
-          with:
-            name: conditions-ai
+    - name: Download build artifact
+      uses: actions/download-artifact@v4
+      with:
+        name: conditions-ai
 
-        - name: Publish to PyPI
-          env:
-            TWINE_USERNAME: __token__
-            TWINE_PASSWORD: ${{ secrets.PYPI_TOKEN }}
-          run: uv python -m twine upload dist/*
+    - name: Publish to PyPI
+      env:
+        TWINE_USERNAME: __token__
+        TWINE_PASSWORD: ${{ secrets.PYPI_TOKEN }}
+      run: uv python -m twine upload dist/*

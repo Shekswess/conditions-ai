@@ -42,7 +42,7 @@ from conditions_ai.models.conditions_openai import ConditionsAIOpenAI
 
 if __name__ == "__main__":
     # Set the OS environment variable OPENAI_API_KEY if you don't want to pass the API key as an argument and change the model_id to the model you want to use
-    conditions_ai_openai = ConditionsAIOpenAI(api_key="YOUR_OPENAI_API_KEY", openai_model_id="gpt-4o-mini")
+    conditions_ai_openai = ConditionsAIOpenAI(openai_api_key="YOUR_OPENAI_API_KEY", openai_model_id="gpt-4o-mini")
     
     print(conditions_ai_openai.is_even(2)) # True
     print(conditions_ai_openai.is_odd(2)) # False

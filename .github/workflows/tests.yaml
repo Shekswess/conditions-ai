@@ -22,7 +22,7 @@ jobs:
         run: uv python install
 
       - name: Install the project
-        run: uv add conditions-ai>0.1 pytest
+        run: uv add conditions-ai --dev pytest
 
       - name: Run tests
         run: uv run pytest tests/
